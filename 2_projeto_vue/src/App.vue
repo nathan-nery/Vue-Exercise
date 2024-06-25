@@ -1,27 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <PrimeiroComponente />
+    <LifeCycle />
+    <PessoaX />
+  </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import LifeCycle from "./components/LifeCycle.vue"
+import PessoaX from './components/PessoaX.vue'
+import PrimeiroComponente from './components/PrimeiroComponente.vue'
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+  export default {
+    name: 'App',
+    components: {
+      PrimeiroComponente,
+      LifeCycle,
+      PessoaX
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
